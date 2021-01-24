@@ -1,0 +1,10 @@
+name: Zapor
+version: ${project.version}
+main: ru.danka.zapor.ZaporPlugin
+commands:
+  запор:
+    description: Запор, хуле непонятно там все написано
+    aliases:
+      - запористо
+      - пошлопозапору
+      - срать
