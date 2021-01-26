@@ -32,6 +32,7 @@ public final class ZaporPlugin extends JavaPlugin {
 
             Player player = (Player) sender;
             Location location = player.getLocation();
+            location.add(location.getDirection());
             Zombie zombie = location.getWorld().spawn(location, Zombie.class);
             zombie.setCustomName(ChatColor.RED + "LEATHER MAN");
             zombie.setCustomNameVisible(true);
@@ -46,7 +47,7 @@ public final class ZaporPlugin extends JavaPlugin {
             item = CraftItemStack.asBukkitCopy(nmsItem);
 
             player.getInventory().addItem(item);
-            
+
             return true;
         });
         Bukkit.getPluginManager().registerEvents(new ZaporListener(this), this);
